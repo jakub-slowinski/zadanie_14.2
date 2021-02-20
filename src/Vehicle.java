@@ -1,19 +1,29 @@
+import java.util.Scanner;
+
 class Vehicle {
 
+    private String typeOfVehicle;
     private String brand;
     private String model;
     private int yearOfProduction;
     private double mileage;
     private String vehicleIdNumber;
-    private String typeOfVehicle;
 
-    Vehicle(String brand, String model, int yearOfProduction,
-            double mileage, String vehicleIdNumber, String typeOfVehicle) {
+    Vehicle(String typeOfVehicle, String brand, String model, int yearOfProduction,
+            double mileage, String vehicleIdNumber) {
+        this.typeOfVehicle = typeOfVehicle;
         this.brand = brand;
         this.model = model;
         this.yearOfProduction = yearOfProduction;
         this.mileage = mileage;
         this.vehicleIdNumber = vehicleIdNumber;
+    }
+
+    String getTypeOfVehicle() {
+        return typeOfVehicle;
+    }
+
+    void setTypeOfVehicle(String typeOfVehicle) {
         this.typeOfVehicle = typeOfVehicle;
     }
 
@@ -57,11 +67,5 @@ class Vehicle {
         this.vehicleIdNumber = vehicleIdNumber;
     }
 
-    String getTypeOfVehicle() {
-        return typeOfVehicle;
-    }
 
-    void setTypeOfVehicle(String typeOfVehicle) {
-        this.typeOfVehicle = typeOfVehicle;
-    }
 }
