@@ -31,7 +31,7 @@ class Main {
                 case takeToQueue -> {
                     vehicles.offer(vehicleCreator.create(scanner));
                     System.out.println("Pojazd zakolejkowany");
-                    System.out.println(vehicles);
+                    System.out.println(vehicles.peek());
                 }
                 case makeInspection -> {
                     inspection.send(vehicles);
